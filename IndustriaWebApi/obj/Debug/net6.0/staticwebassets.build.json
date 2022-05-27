@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BTn5xx4qKTuMVX96+tvfcKvvD56FRiYSCDCKmbVWiJ4=",
+  "Source": "IndustriaWebApi",
+  "BasePath": "_content/IndustriaWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
