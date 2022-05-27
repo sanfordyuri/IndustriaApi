@@ -11,7 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = "server=localhost;database=industriaDb;user=root;password=root";
-builder.Services.AddDbContext<IndustriaContext>(opts => opts.UseMySQL(connectionString));
+builder.Services.AddDbContext<IndustriaContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
