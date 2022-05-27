@@ -1,6 +1,5 @@
 using IndustriaWebApi.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connectionString = "server=localhost;database=industriaDb;user=root;password=root";
+builder.Services.AddDbContext<IndustriaContext>(opts => opts.UseMySQL(connectionString));
 
 var app = builder.Build();
 
