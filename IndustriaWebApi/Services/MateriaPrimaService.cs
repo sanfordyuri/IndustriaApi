@@ -25,10 +25,9 @@ namespace IndustriaWebApi.Services
             _context.SaveChanges();
         }
 
-        public IQueryable<MateriaPrimaDto> GetAll()
+        public IQueryable GetAll()
         {
-            return _mapper.Map<IQueryable<MateriaPrimaDto>>(_context.Set<MateriaPrima>()
-                .AsNoTracking().AsQueryable());
+            return _context.Set<MateriaPrima>().AsNoTracking().AsQueryable();
         }
 
         public MateriaPrimaDto GetById(Guid Id)

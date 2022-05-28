@@ -8,7 +8,7 @@
 
         void Remove(TModel model);
 
-        IQueryable<TModel> GetAll();
+        IQueryable GetAll();
 
         TModel GetById(Guid Id);
     }

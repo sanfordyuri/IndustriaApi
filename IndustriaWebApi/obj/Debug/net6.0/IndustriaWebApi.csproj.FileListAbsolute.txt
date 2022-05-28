@@ -1,3 +1,10 @@
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.csproj.AssemblyReference.cache
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.AssemblyInfoInputs.cache
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.AssemblyInfo.cs
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.csproj.CoreCompileInputs.cache
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.MvcApplicationPartsAssemblyInfo.cs
+E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.MvcApplicationPartsAssemblyInfo.cache
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\appsettings.Development.json
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\appsettings.json
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\IndustriaWebApi.exe
@@ -19,13 +26,6 @@ E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.csproj.AssemblyReference.cache
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.GeneratedMSBuildEditorConfig.editorconfig
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.AssemblyInfoInputs.cache
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.AssemblyInfo.cs
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.csproj.CoreCompileInputs.cache
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.MvcApplicationPartsAssemblyInfo.cs
-E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\IndustriaWebApi.MvcApplicationPartsAssemblyInfo.cache
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\staticwebassets.build.json
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\staticwebassets.development.json
 E:\yuri\projetos\Api\industriaApi\IndustriaWebApi\IndustriaWebApi\obj\Debug\net6.0\scopedcss\bundle\IndustriaWebApi.styles.css
