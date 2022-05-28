@@ -21,7 +21,7 @@ namespace IndustriaWebApi.Services
 
         public IQueryable<MateriaPrima> GetAll()
         {
-            return NewMethod();
+            return _context.Set<MateriaPrima>().AsNoTracking().AsQueryable();
         }
 
         private IQueryable<MateriaPrima> NewMethod()
