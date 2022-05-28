@@ -1,4 +1,6 @@
-﻿using IndustriaWebApi.Models.Dtos;
+﻿using AutoMapper;
+using IndustriaWebApi.Data;
+using IndustriaWebApi.Models.Dtos;
 using IndustriaWebApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +12,9 @@ namespace IndustriaWebApi.Controllers
     {
         private ProdutoService _service;
 
-        public ProdutoController(ProdutoService service)
+        public ProdutoController(IndustriaContext _context, IMapper _mapper)
         {
-            _service = service;
+            _service = new ProdutoService(_context, _mapper);
         }
 
         [HttpGet]
@@ -22,7 +24,7 @@ namespace IndustriaWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(Guid Id)
+        public IActionResult GetById([FromQuery] Guid Id)
         {
             ProdutoDto produto = _service.GetById(Id);
             if (produto != null)
@@ -39,8 +41,8 @@ namespace IndustriaWebApi.Controllers
             return CreatedAtAction(nameof(GetById), new { Id = produto.Id }, produto);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(ProdutoDto novoProduto)
+        [HttpPut]
+        public IActionResult Put([FromBody] ProdutoDto novoProduto)
         {
             if(_service.GetById(novoProduto.Id) == null)
             {
@@ -51,7 +53,7 @@ namespace IndustriaWebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid Id)
+        public IActionResult Delete([FromQuery] Guid Id)
         {
             ProdutoDto produto = _service.GetById(Id);
             if (produto == null)

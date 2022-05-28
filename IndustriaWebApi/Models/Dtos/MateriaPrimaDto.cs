@@ -4,6 +4,9 @@ namespace IndustriaWebApi.Models.Dtos
 {
     public class MateriaPrimaDto
     {
+        public MateriaPrimaDto()
+            => Id = Guid.NewGuid();
+
         [Key]
         [Required]
         public Guid Id { get; set; }

@@ -11,6 +11,7 @@ namespace IndustriaWebApi.Services.Mappers
             CreateMap<Produto, ProdutoDto>();
             CreateMap<ProdutoDto, Produto>();
             CreateMap<IQueryable<ProdutoDto>, IQueryable<Produto>>();
+            CreateMap<IQueryable<Produto>, IQueryable<ProdutoDto>>();
         }
     }
 }

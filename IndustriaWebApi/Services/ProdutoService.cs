@@ -25,10 +25,9 @@ namespace IndustriaWebApi.Services
             _context.SaveChanges();
         }
 
-        public IQueryable<ProdutoDto> GetAll()
+        public IQueryable<Produto> GetAll()
         {
-            return _mapper.Map<IQueryable<ProdutoDto>>(_context.Set<Produto>()
-                .AsNoTracking().AsQueryable());
+            return _context.Set<Produto>().AsNoTracking().AsQueryable();
         }
 
         public ProdutoDto GetById(Guid Id)
@@ -47,6 +46,11 @@ namespace IndustriaWebApi.Services
         {
             _context.Set<Produto>().Update(_mapper.Map<Produto>(model));
             _context.SaveChanges();
+        }
+
+        IQueryable<ProdutoDto> IService<ProdutoDto>.GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }
