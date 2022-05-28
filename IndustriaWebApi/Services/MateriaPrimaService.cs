@@ -1,48 +1,51 @@
-﻿using IndustriaWebApi.Data;
+﻿using AutoMapper;
+using IndustriaWebApi.Data;
+using IndustriaWebApi.Models.Dtos;
 using IndustriaWebApi.Models.Entities;
 using IndustriaWebApi.Services.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace IndustriaWebApi.Services
 {
-    public class MateriaPrimaService : IService<MateriaPrima>
+    public class MateriaPrimaService : IService<MateriaPrimaDto>
     {
         private IndustriaContext _context;
+        private IMapper _mapper;
 
-        public MateriaPrimaService(IndustriaContext _context)
+        public MateriaPrimaService(IndustriaContext _context, IMapper _mapper)
         {
+            this._mapper = _mapper;
             this._context = _context;
         }
 
-        public void Create(MateriaPrima model)
+        public void Create(MateriaPrimaDto model)
         {
-            _context.Set<MateriaPrima>().Add(model);
-        }
-
-        public IQueryable<MateriaPrima> GetAll()
-        {
-            return _context.Set<MateriaPrima>().AsNoTracking().AsQueryable();
-        }
-
-        private IQueryable<MateriaPrima> NewMethod()
-        {
-            return _context.Set<MateriaPrima>().AsNoTracking().AsQueryable();
-        }
-
-        public MateriaPrima GetById(Guid Id)
-        {
-            return _context.Set<MateriaPrima>().Where(p => p.Id == Id).AsNoTracking().FirstOrDefault();
-        }
-
-        public void Remove(MateriaPrima model)
-        {
-            _context.Set<MateriaPrima>().Remove(model);
+            MateriaPrima produto = _mapper.Map<MateriaPrima>(model);
+            _context.Set<MateriaPrima>().Add(produto);
             _context.SaveChanges();
         }
 
-        public void Update(MateriaPrima model)
+        public IQueryable<MateriaPrimaDto> GetAll()
         {
-            _context.Set<MateriaPrima>().Update(model);
+            return _mapper.Map<IQueryable<MateriaPrimaDto>>(_context.Set<MateriaPrima>()
+                .AsNoTracking().AsQueryable());
+        }
+
+        public MateriaPrimaDto GetById(Guid Id)
+        {
+            return _mapper.Map<MateriaPrimaDto>(_context.Set<MateriaPrima>().Where(p => p.Id == Id)
+                .AsNoTracking().FirstOrDefault());
+        }
+
+        public void Remove(MateriaPrimaDto model)
+        {
+            _context.Set<MateriaPrima>().Remove(_mapper.Map<MateriaPrima>(model));
+            _context.SaveChanges();
+        }
+
+        public void Update(MateriaPrimaDto model)
+        {
+            _context.Set<MateriaPrima>().Update(_mapper.Map<MateriaPrima>(model));
             _context.SaveChanges();
         }
     }
