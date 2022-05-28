@@ -23,7 +23,8 @@ namespace IndustriaWebApi.Controllers
             return Ok(_service.GetAll());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("id")]
         public IActionResult GetById([FromQuery] Guid Id)
         {
             ProdutoDto produto = _service.GetById(Id);
@@ -52,7 +53,8 @@ namespace IndustriaWebApi.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("id")]
         public IActionResult Delete([FromQuery] Guid Id)
         {
             ProdutoDto produto = _service.GetById(Id);
